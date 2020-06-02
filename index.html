@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Question List</title>
+</head>
+<body>
+  <h1>Questions List Maker</h1>
+  <div class="container">
+    <form id="question-form">
+      <div class="form-group">
+        <label for="question-title">Question:</label>
+        <input type="text" id="question-title">
+      </div>
+      <div class="form-group">
+        <label for="question-chapter">Chapter:</label>
+        <input type="text" id="question-chapter">
+      </div>
+      <div class="form-group">
+        <label for="question-marks">Marks:</label>
+        <input type="number" id="question-marks">
+      </div>
+      
+      <input type="submit" value="submit" class="btn">
+      <input class="btn print" value="print">    
+    </form>
+    <table id="questions-table">
+      <thead>
+        <tr>
+          <td>Question</td>
+          <td>Chapter</td>
+          <td>Marks</td>
+          <td>delete</td>
+        </tr>
+      </thead>
+      <tbody id="questions-list">
+      </tbody>
+    </table>
+
+  </div>
+  <script src="./ES6app.js"></script>
+</body>
+</html>

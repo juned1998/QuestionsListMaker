@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+}
+a{
+  text-decoration: none;
+}
+
+.container{
+  max-width: 940px;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+}
+
+form{
+  background-color:#5cdb95;
+  color: #05386b;
+  width: 100%;
+  padding: 2rem 5.5rem;
+  font-size: 2rem;
+}
+
+form .form-group{
+  margin-bottom: 3rem ;
+}
+
+form .form-group input{
+  color: #05386b;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  border: none;
+}
+form .form-group input:focus{
+  outline: none;
+}
+
+form .form-group label, form .form-group input{
+  display: block;
+  margin: 1rem 0rem;  
+}
+
+.btn{
+  width: 49%;
+  padding: 0.5rem 2rem;
+  margin: 0.1rem;
+  font-size: 2rem;
+  border: solid 1px #05386b;
+  background-color: #5cdb95;
+  border-radius: 0.5rem;
+  text-align: center;
+  outline: none;
+}
+
+.btn:hover{
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:active{
+  outline: none;
+  border: solid 1px #05386b;
+  background-color: #05386b;
+  color: #5cdb95;
+}
+
+.delete{
+  color: red;
+}
+
+#questions-table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+  text-align: left;
+  table-layout: fixed;
+}
+#questions-table td{
+  padding: 1rem;
+  word-wrap: break-word;
+}
+
+#questions-table>thead>tr>td{
+  background-color: #05386b;
+  color: #fff; 
+}
+
+#questions-table>tbody>tr:nth-child(even){
+  background-color: #fff;
+}
+#questions-table>tbody>tr:nth-child(odd){
+  background-color: #f4f4f4;
+}
+
+#questions-table>tbody>tr:hover{
+  background-color: #ddd;
+}
+
+
+.success{
+  background-color: #1eff00;
+  color: white;
+  border: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.error{
+  background-color: #f50505;
+  color: white;
+  border: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+
+
