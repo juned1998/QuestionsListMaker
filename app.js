@@ -103,27 +103,32 @@ document.getElementById('questions-list').addEventListener('click',function(e){
 });
 
 
-document.querySelector('#question-form').addEventListener('click',function(e){
-  if(e.target.classList.contains('print')){
+document.querySelector('.print').addEventListener('click',function(e){
+  if(e.target.className='btn print'){
 
     //get table element 
-    const table = document.querySelector('#questions-table');
-    console.log(table);
+    let table = document.getElementById('questions-table').cloneNode(true);
 
-    //window variable
-    const win = window.open('');
+    // removing deletecolumn table>thead>tr>td>delete 
+    table.firstElementChild.firstElementChild.lastElementChild.remove();
 
-    win.document.write(`
-      <html>
-      <head></head>
-      <body>
-      ${table}
-      </body>
-      </html>
-    `);
+    //removing delete option in rows
+    const rows = table.children[1].children;
 
-    win.document.close();
+    for(let i = 0; i<rows.length; i++){
+      //removes delete option from each row
+      rows[i].lastElementChild.remove();
+    }
+
+    win = window.open("");
+    win.document.write('<style>thead, td{ border: solid 1px #ddd;}');
+    win.document.write('thead{background-color: #ddd}');
+    win.document.write('table{width: 90%;border-collapse: collapse; margin: 16px;');
+    win.document.write('font-size: 1.5rem;text-align: left;table-layout: fixed}');
+    win.document.write('</style><h1 style="text-align:center">Question list</h1>');
+    win.document.write(table.outerHTML);
     win.print();
+    win.document.close();
   }
   e.preventDefault();
 });

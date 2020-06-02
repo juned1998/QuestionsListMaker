@@ -159,8 +159,6 @@ document.querySelector('.print').addEventListener('click',function(e){
     // removing deletecolumn table>thead>tr>td>delete 
     table.firstElementChild.firstElementChild.lastElementChild.remove();
 
-    
-
     //removing delete option in rows
     const rows = table.children[1].children;
 
