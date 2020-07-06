@@ -18,24 +18,25 @@ a{
 
 h1{
   text-align: center;
+  font-family: serif;
 }
 
 form{
   background-color:#5cdb95;
   color: #05386b;
   width: 100%;
-  padding: 2rem 5.5rem;
-  font-size: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
 }
 
 form .form-group{
-  margin-bottom: 3rem ;
+  margin-bottom: 1rem ;
 }
 
 form .form-group input{
   color: #05386b;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   padding: 0.8rem;
   border: none;
 }
@@ -45,14 +46,14 @@ form .form-group input:focus{
 
 form .form-group label, form .form-group input{
   display: block;
-  margin: 1rem 0rem;  
+  margin: 0.5rem 0rem;  
 }
 
 .btn{
   width: 49%;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   margin: 0.1rem;
-  font-size: 2rem;
+  font-size: 1rem;
   border: solid 1px #05386b;
   background-color: #5cdb95;
   border-radius: 0.5rem;
@@ -79,7 +80,7 @@ form .form-group label, form .form-group input{
 #questions-table{
   width: 100%;
   border-collapse: collapse;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: left;
   table-layout: fixed;
 }
