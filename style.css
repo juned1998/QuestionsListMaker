@@ -84,12 +84,11 @@ form .form-group{
 }
 
 form .form-group input{
-  color: #fff;
+  color: #05386b;
   width: 100%;
   font-size: 1rem;
   padding: 0.5rem;
-  background-color:rgba(0,0,0,0.1)
-  border: solid 1px #fff;
+  border: none;
 }
 form .form-group input:focus{
   outline: none;
