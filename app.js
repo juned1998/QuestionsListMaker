@@ -14,6 +14,7 @@ UI.prototype.addQuestionTotheList = function(question){
 
   //create row element
   const row = document.createElement('tr');
+  row.classList.add('spawn-row-anim','delete-row-anim');
   row.innerHTML = `
   <td>${question.question}</td>
   <td>${question.chapter}</td>

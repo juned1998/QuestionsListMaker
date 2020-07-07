@@ -13,6 +13,7 @@ class UI{
 
     //create row element
     const row = document.createElement('tr');
+    row.classList.add('spawn-row-anim');
     row.innerHTML = `
     <td>${question.question}</td>
     <td>${question.chapter}</td>
@@ -55,7 +56,6 @@ class UI{
 
   deleteQuestion(target){
     target.parentElement.parentElement.remove();
-    
   }
 }
 

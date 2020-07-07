@@ -2,10 +2,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  --shadow-value: 2px 2px 20px 5px rgba(0,0,0,0.4);
+}
+html{
+  height: 100%;
 }
 
 body{
   font-family: sans-serif;
+  background: linear-gradient(#37D5D6,#36096D);
 }
 a{
   text-decoration: none;
@@ -14,30 +19,74 @@ a{
 .container{
   max-width: 940px;
   margin: auto;
+  padding: 1rem;
+  animation: animateContainer 0.5s 0.5s forwards ease-in;
+  transform: translateX(-1500px);
+}
+
+@keyframes animateContainer{
+  to{
+    transform:translateX(0);
+  }
 }
 
 h1{
+  opacity: 0;
   text-align: center;
-  font-family: serif;
+  font-family: sans-serif;
+  font-weight: 800;
+  color: #fff;
+  font-size: 2rem;
+  transform: skew(-30deg);
+  text-shadow: 3px 3px 10px  rgba(0,0,0,0.4);
+  margin: 2rem;
+  transform: translateY(-200px);
+  animation-name: animateh1;
+  animation-duration: 0.4s;
+  animation-fill-mode: forwards;
 }
 
+@keyframes animateh1{
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
 form{
-  background-color:#5cdb95;
-  color: #05386b;
+  position: relative;
+  background-color:rgba(4, 190, 66, 0.349);
+  box-shadow: var(--shadow-value);
+  color: #fff;
   width: 100%;
   padding: 1rem 1.5rem;
   font-size: 1rem;
+  z-index: 1;
 }
 
 form .form-group{
   margin-bottom: 1rem ;
+  
+}
+
+.form-elements-anim{
+  transform: scale(0);
+  animation: animateFormGroup 0.5s 1.5s forwards ease; 
+}
+
+@keyframes animateFormGroup{
+  to{
+    transform: scale(1);
+  }
 }
 
 form .form-group input{
   color: #05386b;
   width: 100%;
   font-size: 1rem;
-  padding: 0.8rem;
+  padding: 0.5rem;
   border: none;
 }
 form .form-group input:focus{
@@ -49,16 +98,30 @@ form .form-group label, form .form-group input{
   margin: 0.5rem 0rem;  
 }
 
+.buttons{
+  width: 100%;
+  margin: 0.1rem auto;
+}
+
 .btn{
-  width: 49%;
+  margin: 0;
+  width: 48%;
   padding: 0.5rem 1rem;
-  margin: 0.1rem;
   font-size: 1rem;
-  border: solid 1px #05386b;
-  background-color: #5cdb95;
-  border-radius: 0.5rem;
+  border: none;
   text-align: center;
   outline: none;
+}
+
+input[value='submit']{
+  font-weight: 600;
+  background: #e4e6e7;
+  color: #58595a;
+}
+
+input[value='print']{
+  background: #55aefc;
+  color: #fff;
 }
 
 .btn:hover{
@@ -67,10 +130,7 @@ form .form-group label, form .form-group input{
 }
 
 .btn:active{
-  outline: none;
-  border: solid 1px #05386b;
-  background-color: #05386b;
-  color: #5cdb95;
+  transform: translateY(3px);
 }
 
 .delete{
@@ -78,19 +138,30 @@ form .form-group label, form .form-group input{
 }
 
 #questions-table{
+  box-shadow: var(--shadow-value);
   width: 100%;
   border-collapse: collapse;
   font-size: 1rem;
   text-align: left;
   table-layout: fixed;
+  transform: translateY(1000px);
+  animation: animateTable 0.8s 1.5s forwards ease-out;
 }
+
+@keyframes animateTable{
+  to{
+    transform: translateY(0);
+  }
+}
+
 #questions-table td{
   padding: 1rem;
   word-wrap: break-word;
 }
 
 #questions-table>thead>tr>td{
-  background-color: #05386b;
+  opacity: 0.8;
+  background-color: #36096D;
   color: #fff; 
 }
 
@@ -105,9 +176,26 @@ form .form-group label, form .form-group input{
   background-color: #ddd;
 }
 
+.spawn-row-anim{
+  transform: scale(0);
+  animation: spawnRow 0.5s forwards ease;
+}
+
+
+
+@keyframes spawnRow{
+  to{
+    transform: scale(1);
+  }
+}
+
+
+
 
 .success{
-  background-color: #1eff00;
+  position: relative;
+  z-index: 2;
+  background-color: #30d61a;
   color: white;
   border: 0.5rem;
   padding: 1rem;
@@ -115,6 +203,8 @@ form .form-group label, form .form-group input{
 }
 
 .error{
+  position: relative;
+  z-index: 2;
   background-color: #f50505;
   color: white;
   border: 0.5rem;
