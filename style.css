@@ -10,7 +10,8 @@ html{
 
 body{
   font-family: sans-serif;
-  background: linear-gradient(#37D5D6,#36096D);
+  background-image: linear-gradient(#37D5D6,#36096D);
+  background-attachment: fixed;
 }
 a{
   text-decoration: none;
