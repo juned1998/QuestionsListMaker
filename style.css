@@ -88,7 +88,7 @@ form .form-group input{
   width: 100%;
   font-size: 1rem;
   padding: 0.5rem;
-  background:rgba(0,0,0,0)
+  background-color:rgba(0,0,0,0.1)
   border: solid 1px #fff;
 }
 form .form-group input:focus{
